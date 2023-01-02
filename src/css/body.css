@@ -1,0 +1,31 @@
+body {
+    padding: 0 24px;
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--bg);
+}
+
+:root {
+    --bg: #171717;
+    --green: #00DF5E;
+    --white: #F9F9F9;
+    --gray: #828282;
+    --gray-200: #333333;
+    --gray-400: #212121;
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        padding: 0 15%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        padding: 0 10%;
+    }
+}

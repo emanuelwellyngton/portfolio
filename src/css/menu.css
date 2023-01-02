@@ -1,0 +1,102 @@
+#btn_menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#menu {
+    display: flex;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow-y: hidden;
+}
+
+.menu_item {
+    padding: 20px 0;
+}
+
+.menu_item a {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 18.23px;
+    font-weight: 500;
+}
+
+.menu_item a:hover {
+    color: var(--white);
+    transition: .06s;
+}
+
+#menu_disable {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+#nav.active #menu_disable {
+    visibility: visible;
+    width: initial;
+    height: initial;
+}
+
+#nav.active #menu_active {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+#nav.active #menu {
+    visibility: visible;
+    width: initial;
+    height: initial;
+    position: absolute;
+    flex-direction: column;
+    top: 70px;
+    left: 0;
+    background-color: var(--gray-400);
+    width: calc(100vw - 48px);
+    height: calc(100vh - 70px);
+    padding: 0 24px;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: .6s;
+}
+
+@media screen and (min-width: 600px) {
+
+    .menu_item a {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .menu_item {
+        margin-right: 45px;
+    }
+
+    .menu_item:last-child {
+        margin-right: 0;
+    }
+
+    #menu_active {
+        height: 50px;
+        width: 50px;
+    }
+
+    #nav.active #menu_disable {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #btn_menu {
+        display: none;
+    }
+
+    #menu {
+        visibility: visible;
+        height: auto;
+        width: auto;
+    }
+}

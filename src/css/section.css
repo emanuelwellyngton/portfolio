@@ -1,0 +1,22 @@
+.section {
+    margin-bottom: 56px;
+}
+
+.section_title {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .section {
+        margin-bottom: 127px;
+    }
+
+    .section_title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}

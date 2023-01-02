@@ -1,0 +1,43 @@
+#skills_nav {
+    margin-top: 24px;
+    display: grid;
+    grid: repeat(2, auto) / auto-flow auto;
+    gap: 21px;
+}
+
+.skill {
+    text-align: center;
+    background-color: var(--gray-400);
+    border: 1px solid var(--gray-200);
+    padding: 21px 0;
+}
+
+.skill_icon {
+    height: 48px;
+    width: auto;
+}
+
+@media screen and (min-width: 600px) {
+
+    .skill {
+        padding: 35px 0;
+    }
+
+    .skill_icon {
+        height: 80px;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .skill {
+        box-sizing: border-box;
+        width: 15%;
+        padding: 35px 0;
+    }
+
+    #skills_nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
