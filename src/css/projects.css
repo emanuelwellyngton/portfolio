@@ -13,6 +13,10 @@
     width: calc(80vw - 24px);
 }
 
+.project:hover {
+    scale: 1.1;
+}
+
 .project:last-child {
     margin-bottom: 0;
 }
@@ -41,7 +45,7 @@
 @media screen and (min-width: 600px) {
     #projects_nav {
         display: grid;
-        grid: repeat(2, auto) / auto-flow auto;
+        grid-template-columns: repeat(3, 1fr);
         gap: 32px 0;
         justify-content: space-between;
         

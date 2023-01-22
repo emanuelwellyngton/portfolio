@@ -37,6 +37,7 @@
 
 .presentation_btns:hover {
     cursor: pointer;
+    box-shadow: 0px 0px 94px -13px rgba(0,223,93,1);
 }
 
 #btn-cv {
