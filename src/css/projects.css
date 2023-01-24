@@ -40,6 +40,16 @@
     height: 100px;
     width: 100%;
     background-color: var(--bg);
+    background-position: center;
+    background-size: cover;
+}
+
+#decodificador_cover {
+    background-image: url(../img/decodificador_cover.jpg);
+}
+
+#empire-burger_cover {
+    background-image: url(../img/empire-burger_cover.jpg);
 }
 
 @media screen and (min-width: 600px) {
