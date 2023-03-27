@@ -53,6 +53,10 @@
     background-image: url(../img/empire-burger_cover.jpg);
 }
 
+#conversor_cover {
+    background-image: url(../img/conversor-cover.jpg);
+}
+
 @media screen and (min-width: 600px) {
     #projects_nav {
         display: grid;
