@@ -43,6 +43,7 @@
 #btn-cv {
     background-color: var(--green);
     color: var(--bg);
+    text-align: center;
 }
 
 #btn-ctt {
