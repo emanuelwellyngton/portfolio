@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="src/css/projects.css">
     <link rel="stylesheet" href="src/css/services.css">
     <link rel="stylesheet" href="src/css/skills.css">
+    <script src="src/components/ProjetoCard.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -82,21 +83,21 @@
         <section class="section" id="projects">
             <h2 class="section_title">Projetos</h2>
             <ul id="projects_nav">
-                <a href="https://emanuelwellyngton.github.io/decodificador/" rel="external" target="_blank"><li class="project">
-                    <div class="project_cover" id="decodificador_cover"></div>
-                    <h3 class="project_title">Decodificador</h3>
-                    <p class="project_descrition">Tecnologias: HTML, CSS e JS.</p>
-                </li></a>
-                <a href="https://emanuelwellyngton.github.io/empire-burger/" rel="external" target="_blank"><li class="project">
-                    <div class="project_cover" id="empire-burger_cover"></div>
-                    <h3 class="project_title">Empire Burger</h3>
-                    <p class="project_descrition">Tecnologias: HTML, CSS e JS.</p>
-                </li></a>
-                <a href="https://github.com/emanuelwellyngton/conversor" rel="external" target="_blank"><li class="project">
-                    <div class="project_cover" id="conversor_cover"></div>
-                    <h3 class="project_title">Conversor</h3>
-                    <p class="project_descrition">Tecnologias: Java.</p>
-                </li></a>
+                <projeto-card title="Alura Hotel"
+                    cover="src/img/alura-hotel-cover.jpg"
+                    tecnology="Java, Swing e JDBC"
+                    url="https://github.com/emanuelwellyngton/alura_hotel"
+                ></projeto-card>
+                <projeto-card title="Empire Burger"
+                    cover="src/img/empire-burger_cover.jpg"
+                    tecnology="HTML, CSS e JS"
+                    url="https://emanuelwellyngton.github.io/empire-burger"
+                ></projeto-card>
+                <projeto-card title="Conversor"
+                    cover="src/img/conversor-cover.jpg"
+                    tecnology="Java"
+                    url="https://github.com/emanuelwellyngton/conversor"
+                ></projeto-card>
             </ul>
         </section>
         <section class="section" id="services">
