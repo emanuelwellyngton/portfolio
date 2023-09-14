@@ -44,8 +44,8 @@
     content: url(../img/instagram.svg)
 }
 
-#phone_icon {
-    content: url(../img/phone-telephone.svg)
+#whatsapp_icon {
+    content: url(../img/whatsapp.svg)
 }
 
 @media screen and (min-width: 600px) {
