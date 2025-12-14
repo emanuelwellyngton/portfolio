@@ -1,0 +1,21 @@
+<section id="blog" class="py-24">
+  <h2 class="text-4xl font-bold text-center mb-12">
+    Blog
+  </h2>
+  <div class="max-w-4xl mx-auto space-y-8">
+    @for(post of posts(); track post.title) {
+      <a [href]="post.url" target="_blank" class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700/50 border border-transparent hover:border-sky-400 transition-all duration-300 group">
+        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+          <h3 class="text-xl font-semibold text-slate-50 group-hover:text-sky-400 transition-colors duration-300">{{ post.title }}</h3>
+          <span class="font-mono text-sm text-slate-400 mt-1 sm:mt-0">{{ post.tag }}</span>
+        </div>
+        <div class="font-mono text-xs text-slate-500 mb-3">
+          {{ post.date }} &bull; {{ post.readTime }}
+        </div>
+        <p class="text-slate-300">
+          {{ post.summary }}
+        </p>
+      </a>
+    }
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<section id="about" class="py-24">
+  <h2 class="text-4xl font-bold text-center mb-12">
+    Sobre Mim
+  </h2>
+  <div class="grid md:grid-cols-5 gap-12 items-center">
+    <div class="md:col-span-2 space-y-4 text-slate-300 text-lg">
+      <p>
+        Sou um desenvolvedor Fullstack apaixonado por criar soluções de software robustas e eficientes, desde a arquitetura do backend até a implementação de interfaces de usuário elegantes e responsivas.
+      </p>
+      <p>
+        Com sólida experiência em ecossistemas Java e JavaScript, busco constantemente aprender novas tecnologias para entregar produtos de alta qualidade que resolvem problemas reais.
+      </p>
+    </div>
+    <div class="md:col-span-3 space-y-8">
+      @for(category of techStack(); track category.name) {
+        <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-sky-400 mb-4">{{ category.name }}</h3>
+          <div class="flex flex-wrap gap-3">
+            @for(tech of category.technologies; track tech) {
+              <span class="font-mono text-sm bg-slate-700 text-slate-200 px-3 py-1 rounded-full">
+                {{ tech }}
+              </span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
