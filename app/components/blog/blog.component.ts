@@ -22,7 +22,7 @@ export class BlogComponent {
       readTime: '8 min de leitura',
       summary: 'Um guia aprofundado sobre como construir, containerizar e orquestrar uma arquitetura de microservices utilizando o ecossistema Spring.',
       tag: 'Backend',
-      url: '#',
+      url: '#blog-post',
     },
     {
       title: 'State Management em Angular com Signals',
@@ -30,7 +30,7 @@ export class BlogComponent {
       readTime: '5 min de leitura',
       summary: 'Explore a nova abordagem reativa do Angular para gerenciamento de estado, tornando suas aplicações mais simples e performáticas.',
       tag: 'Frontend',
-      url: '#',
+      url: '#blog-post',
     },
     {
       title: 'Boas Práticas de CI/CD para Desenvolvedores',
@@ -38,7 +38,7 @@ export class BlogComponent {
       readTime: '10 min de leitura',
       summary: 'Aprenda a configurar pipelines de integração e entrega contínua que automatizam testes e deploys, acelerando o ciclo de desenvolvimento.',
       tag: 'DevOps',
-      url: '#',
+      url: '#blog-post',
     },
   ]);
 }

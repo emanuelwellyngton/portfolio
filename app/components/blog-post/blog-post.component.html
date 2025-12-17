@@ -1,0 +1,102 @@
+<section id="blog-post" class="py-24">
+  <div class="max-w-5xl mx-auto space-y-10 px-4 sm:px-0">
+    <div class="flex items-center gap-3 text-sm text-slate-400">
+      <a href="#blog" class="hover:text-sky-400 transition-colors">Blog</a>
+      <span class="text-slate-600">/</span>
+      <span>Visualização de post</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+      <div class="absolute inset-0">
+        <img [src]="post.heroImage" alt="Capa do artigo" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/80 to-slate-900"></div>
+      </div>
+      <div class="relative p-10 space-y-5">
+        <div class="inline-flex items-center gap-2 rounded-full bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-200 border border-sky-500/30">
+          <span class="h-2 w-2 rounded-full bg-sky-400"></span>
+          {{ post.tag }}
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-50 leading-tight">
+          {{ post.title }}
+        </h1>
+        <p class="text-lg text-slate-300 max-w-3xl">{{ post.excerpt }}</p>
+        <div class="flex flex-wrap items-center gap-4 text-sm text-slate-400">
+          <span class="font-mono">{{ post.date }}</span>
+          <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+          <span>{{ post.readTime }}</span>
+          <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+          <span>Atualizado com Angular 17+ Signals</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-[2fr_1fr] gap-8">
+      <!-- Article -->
+      <article class="space-y-10">
+        @for(section of post.sections; track section.title) {
+          <section class="space-y-3">
+            <h2 class="text-2xl font-semibold text-slate-50">{{ section.title }}</h2>
+            <p class="text-slate-300 leading-relaxed">{{ section.body }}</p>
+            @if(section.bullets?.length) {
+              <ul class="list-disc list-inside space-y-2 text-slate-300">
+                @for(point of section.bullets; track point) {
+                  <li>{{ point }}</li>
+                }
+              </ul>
+            }
+          </section>
+        }
+
+        <blockquote class="border-l-4 border-sky-400/70 pl-6 py-4 bg-slate-800/50 rounded-r-lg text-lg text-slate-200">
+          “{{ post.quote.text }}”
+          <footer class="mt-3 text-sm text-slate-400">{{ post.quote.author }} • {{ post.quote.role }}</footer>
+        </blockquote>
+
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-slate-50">Exemplo real de uso</h3>
+          <p class="text-slate-300">Signals combinam leitura simples no template com efeitos previsíveis. O snippet abaixo mostra um componente zoneless com leitura derivada e toggle de favorito.</p>
+          <pre class="bg-slate-950/70 border border-slate-800 rounded-xl overflow-x-auto text-sm text-slate-100 p-4"><code class="font-mono whitespace-pre">{{ sampleCode }}</code></pre>
+        </div>
+
+        <div class="rounded-xl border border-slate-800 bg-gradient-to-br from-sky-950/30 via-slate-900 to-slate-950 px-6 py-5 flex flex-wrap gap-4 items-center justify-between">
+          <div>
+            <p class="text-slate-200 font-semibold">Pronto para implementar?</p>
+            <p class="text-slate-400">Leve este padrão para seus componentes e compare a performance.</p>
+          </div>
+          <div class="flex gap-3">
+            <a href="#blog" class="px-4 py-2 rounded-md border border-slate-600 text-slate-200 hover:border-sky-400 transition-colors">Voltar para a lista</a>
+            <a href="https://angular.dev/guide/signals" target="_blank" class="px-4 py-2 rounded-md bg-sky-400 text-slate-900 font-semibold hover:bg-sky-300 transition-colors">Ver guia completo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        <div class="border border-slate-800 rounded-xl bg-slate-900/60 p-6 space-y-4">
+          <h3 class="text-lg font-semibold text-slate-50">Resumo rápido</h3>
+          <ul class="space-y-3">
+            @for(item of keyTakeaways; track item) {
+              <li class="flex gap-3 text-slate-300">
+                <span class="mt-1 h-2 w-2 rounded-full bg-sky-400"></span>
+                <span>{{ item }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+
+        <div class="border border-slate-800 rounded-xl bg-slate-900/60 p-6 space-y-4">
+          <h3 class="text-lg font-semibold text-slate-50">Links úteis</h3>
+          <div class="space-y-3">
+            @for(resource of resources; track resource.href) {
+              <a [href]="resource.href" target="_blank" class="flex items-center justify-between gap-3 px-4 py-3 rounded-lg bg-slate-800/70 border border-slate-800 hover:border-sky-400 hover:text-sky-300 transition-colors">
+                <span>{{ resource.label }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L9.707 7.707A1 1 0 018.293 6.293l4-4z" /><path d="M3 9a1 1 0 011-1h4a1 1 0 010 2H5v7h10v-3a1 1 0 112 0v4a1 1 0 01-1 1H4a1 1 0 01-1-1V9z" /></svg>
+              </a>
+            }
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
