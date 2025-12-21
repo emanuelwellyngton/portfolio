@@ -5,6 +5,12 @@ import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
 import { AppRoutes } from './app.routes';
 
+import { provideHttpClient, withFetch } from '@angular/common/http';
+
 bootstrapApplication(AppComponent, {
-  providers: [provideZonelessChangeDetection(), provideRouter(AppRoutes)]
+  providers: [
+    provideZonelessChangeDetection(),
+    provideRouter(AppRoutes),
+    provideHttpClient(withFetch())
+  ]
 }).catch((err) => console.error(err));
