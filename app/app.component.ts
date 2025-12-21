@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @Component({
@@ -9,7 +10,8 @@ import { RouterOutlet } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     FooterComponent,
-    RouterOutlet
+    RouterOutlet,
+    HeaderComponent
   ]
 })
 export class AppComponent {}
