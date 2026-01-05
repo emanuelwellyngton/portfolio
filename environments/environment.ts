@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl: 'https://portfolio-api-8v2r.onrender.com'
+    apiUrl: 'http://3.142.45.38:8080'
 };

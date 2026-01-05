@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 })
 export class ProjectService {
     private http = inject(HttpClient);
-    private apiUrl = environment.apiUrl + '/projects';
+    private apiUrl = environment.apiUrl + '/api/projects';
 
     getProjects(): Observable<Project[]> {
         return this.http.get<Project[]>(this.apiUrl);
