@@ -14,15 +14,15 @@ export class AboutComponent {
   techStack = signal<TechCategory[]>([
     {
       name: 'Backend',
-      technologies: ['Java', 'Spring Boot', 'Node.js', 'PostgreSQL', 'MongoDB'],
+      technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'MySQL'],
     },
     {
       name: 'Frontend',
-      technologies: ['Angular', 'TypeScript', 'Tailwind CSS', 'RxJS', 'Signals'],
+      technologies: ['Angular', 'TypeScript', 'Tailwind CSS'],
     },
     {
       name: 'DevOps & Ferramentas',
-      technologies: ['Docker', 'Git', 'Jenkins', 'AWS', 'Jira'],
+      technologies: ['Docker', 'Git', 'GitHub Actions', 'AWS'],
     },
   ]);
 }
